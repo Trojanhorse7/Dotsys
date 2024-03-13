@@ -1,4 +1,5 @@
 "use client";
+
 import { useState } from "react";
 import {web3Accounts, web3Enable, web3FromAddress, web3FromSource} from "@polkadot/extension-dapp";
 import { ApiPromise, WsProvider } from "@polkadot/api";
@@ -191,7 +192,7 @@ function App() {
           </div>
         ) : (
           <div className="size-full flex items-center justify-center">
-            {signedIn ? (
+            {!signedIn ? (
               <div className="w-full border-white border-4 flex-col flex gap-[2rem] rounded-[10px] p-4 bg-white text-black">
                 <h1 className="text-center text-[2rem]">
                   Sign In using Substrate
